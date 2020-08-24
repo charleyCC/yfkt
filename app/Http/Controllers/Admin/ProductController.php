@@ -126,8 +126,19 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         //
+        $ids =[];
+        if($id!=0){
+            $ids[]=$id;
+        }else{
+            if($request->has('ids')){
+                $ids = $request->ids;
+            }
+        }
+        $counts = Product::destroy($ids);
+        checkreturn($counts>0,"删除");
+        return redirect(route('admin.product.index'));
     }
 }

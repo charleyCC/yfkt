@@ -21,15 +21,15 @@
                             {{ session('data')['msg'] }}
                         </div>
                     @endif
-                    {{--<form action={} method="POST" id="myform">--}}
-                        {{--@csrf--}}
-                        {{--@method("DELETE")--}}
-                    {{--</form>--}}
+                    <form action={} method="POST" id="myform">
+                        @csrf
+                        @method("DELETE")
+                    </form>
                     <div class="table-responsive">
-                        {{--<form action="{{route('admin.product.destroy',['id'=>0])}}" method="post">--}}
-                            {{--@csrf--}}
-                            {{--@method("DELETE ")--}}
-                            {{--<input type="submit" value="批量删除" class="btn btn-danger btn-lg">--}}
+                        <form action="{{route('admin.product.destroy',['product'=>0,'id'=>0])}}" method="post">
+                            @csrf
+                            @method("DELETE ")
+                            <input type="submit" value="批量删除" class="btn btn-danger btn-xs">
                         <table class="table table-bordered">
                             <thead>
                             <tr>
@@ -71,7 +71,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{--</form>--}}
+                        </form>
                         <div style="padding:10px 0;">
                             {{ $list->links() }}
                         </div>

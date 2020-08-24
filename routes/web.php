@@ -40,8 +40,7 @@ Route::prefix('admin')->name('admin.')->group(function (){
     });
 
     //产品
-    Route::resource('product','Admin\ProductController')->except('destroy');
-    Route::get('product/{product}/del','Admin\ProductController@destroy')->name('product.delete');
+    Route::resource('product','Admin\ProductController');
 
     //图片上传接口
     Route::post('upload','Admin\IndexController@imgupload')->name('imgupload');
