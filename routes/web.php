@@ -42,6 +42,9 @@ Route::prefix('admin')->name('admin.')->group(function (){
     //产品
     Route::resource('product','Admin\ProductController');
 
+    //案例
+    Route::resource('cases','Admin\CasesController');
+
     //图片上传接口
     Route::post('upload','Admin\IndexController@imgupload')->name('imgupload');
 

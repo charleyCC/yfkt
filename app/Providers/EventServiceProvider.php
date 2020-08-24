@@ -21,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\ProductDeleteEvent' => [
             'App\Listeners\ProductDeleteListener',
         ],
+        'App\Events\CasesDeleteEvent' => [
+            'App\Listeners\CasesDeleteListener',
+        ],
     ];
 
     /**

@@ -59,8 +59,7 @@
     </div>
 </li>
 <li class="nav-item">
-    {{--<a href="{{route('admin.cases.index')}}" class="nav-link">--}}
-    <a href="#" class="nav-link">
+    <a href="{{route('admin.cases.index')}}" class="nav-link">
         <span class="menu-title">案例管理</span>
         <i class="mdi mdi-cube-send menu-icon"></i>
     </a>
